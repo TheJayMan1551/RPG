@@ -4,24 +4,25 @@
  */
 public class Experience {
 
-	private int gainedPlayerXP;
+	private int PlayerXP;
 	private int playerLvl;
+	private int gainedXP = 10;
 
 	public Experience(int xp, int lvl) {
-		this.gainedPlayerXP = xp;
+		this.PlayerXP = xp;
 		this.playerLvl = lvl;
 	}
 
 	//method to call to receive experience points
 	public int getXP() {
 		System.out.println("you gained 10 experience");
-		gainedPlayerXP += 10;
+		PlayerXP += 10;
 		return 10;
 	}
 
 	//method to check whether player has enough experience to level up
 	public int levelUp() {
-		switch (gainedPlayerXP) {
+		switch (PlayerXP) {
 		case 10:
 			playerLvl = 1;
 			return 1;
@@ -35,9 +36,9 @@ public class Experience {
 			return playerLvl;
 		}
 	}
-	
-	public int getGainedPlayerXP() {
-		return gainedPlayerXP;
-	}
 
+	public int getGainedXP() {
+		return gainedXP;
+	}
+	
 }

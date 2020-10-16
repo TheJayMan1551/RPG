@@ -13,12 +13,16 @@ public class Warrior extends classes {
 	}
 
 	//method to call when our fighter slays an enemy
-	public int killedEnemy() {
-		return xp.getXP();
+	public void killedEnemy() {
+		XP += xp.getXP();
 	}
 	
-	public int checkLevel() {
-		return xp.levelUp();
+	public void checkLevel() {
+		level = xp.levelUp();
+	}
+	
+	public int basicMove() {
+		return attack + 2;
 	}
 
 }

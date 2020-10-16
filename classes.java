@@ -5,13 +5,13 @@
 public class classes {
 
 	protected String name;
-	private int HP;
-	private int attack;
-	private int attackType;
-	private int magic;
-	private int physical;
-	private int level;
-	private int XP;
+	protected int HP;
+	protected int attack;
+	protected int attackType;
+	protected int magic;
+	protected int physical;
+	protected int level;
+	protected int XP;
 
 	//constructor that will take in base stats when child class is made
 	public classes(String name, int HP, int attack, int attackType, int magic, int physcial, int level, int XP) {
