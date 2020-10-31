@@ -6,7 +6,6 @@ public class Experience {
 
 	private int PlayerXP;
 	private int playerLvl;
-	private int gainedXP = 10;
 
 	public Experience(int xp, int lvl) {
 		this.PlayerXP = xp;
@@ -38,7 +37,7 @@ public class Experience {
 	}
 
 	public int getGainedXP() {
-		return gainedXP;
+		return PlayerXP;
 	}
 	
 }
