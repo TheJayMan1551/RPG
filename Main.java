@@ -37,7 +37,7 @@ public class Main {
 
 
 		//a loop that keeps going until either player or enemy's HP equals 0
-		System.out.println("A" + slime.getName() + " has appeared!");
+		System.out.println("A " + slime.getName() + " has appeared!");
 		String attack;
 		while (slime.getHP() >= 0) {
 			System.out.println("Would you like to use Sword Thrust?");
@@ -45,9 +45,13 @@ public class Main {
 			if (attack.contains("yes")) {
 				slime.setHP(slime.getHP() - warrior.basicMove());
 			}
-
+			warrior.setHP(warrior.getHP() - slime.getATK());
+			System.out.println("basic Slime HP: " + slime.getHP());
+			System.out.println("Jay HP: " + warrior.getHP());
 		}
 		kbd.close();
+		warrior.killedEnemy();
+		warrior.checkLevel();
 
 		//shows stats after killing an enemy
 		System.out.printf("%-15s %n","   Class   |   HP   |   Attack   |   Attack Type: Phsyical   |   Level   |   Experience");
